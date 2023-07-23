@@ -1,4 +1,9 @@
+function cleanPath(path: string): string {
+	return path.replace(/^\/\//g, '/');	
+}
+
 export async function readdir(path: string) {
+	path = cleanPath(path);
 	return await (
 		await fetch(`/dir/${path}`, {
 			method: 'GET',
@@ -7,6 +12,7 @@ export async function readdir(path: string) {
 }
 
 export async function readFile(path: string) {
+	path = cleanPath(path);
 	return await (
 		await fetch(`/file/${path}`, {
 			method: 'GET',
@@ -15,6 +21,7 @@ export async function readFile(path: string) {
 }
 
 export async function mkdir(path: string) {
+	path = cleanPath(path);
 	return await (
 		await fetch(`/dir/${path}`, {
 			method: 'PUT',
@@ -23,6 +30,7 @@ export async function mkdir(path: string) {
 }
 
 export async function writeFile(path: string, content: string) {
+	path = cleanPath(path);
 	return await (
 		await fetch(`/file/${path}`, {
 			method: 'PUT',
@@ -35,6 +43,7 @@ export async function writeFile(path: string, content: string) {
 }
 
 export async function rm(path: string) {
+	path = cleanPath(path);
 	return await (
 		await fetch(`/file/${path}`, {
 			method: 'DELETE',
@@ -43,6 +52,8 @@ export async function rm(path: string) {
 }
 
 export async function cp(src: string, dest: string) {
+	src = cleanPath(src);
+	dest = cleanPath(dest);
 	return await (
 		await fetch(`/copyfile`, {
 			method: 'POST',
@@ -55,6 +66,8 @@ export async function cp(src: string, dest: string) {
 }
 
 export async function rename(src: string, dest: string) {
+	src = cleanPath(src);
+	dest = cleanPath(dest);
 	return await (
 		await fetch(`/movefile`, {
 			method: 'POST',
