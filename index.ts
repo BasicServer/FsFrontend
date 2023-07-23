@@ -53,3 +53,15 @@ export async function cp(src: string, dest: string) {
 		})
 	).text();
 }
+
+export async function rename(src: string, dest: string) {
+	return await (
+		await fetch(`/movefile`, {
+			method: 'POST',
+			body: JSON.stringify({ src, dest}),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+	).text();
+}

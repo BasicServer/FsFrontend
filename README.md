@@ -16,4 +16,7 @@ await Fs.mkdir('/path/to/new/directory');
 await Fs.writeFile('/path/to/new/file', 'Hello, world!');
 
 await Fs.rm('/path/to/file/or/directory');
+
+await Fs.cp('/path/to/src', '/path/to/dest');
+await Fs.mv('/path/to/src', '/path/to/dest');
 ```
