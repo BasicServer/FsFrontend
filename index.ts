@@ -41,3 +41,15 @@ export async function rm(path: string) {
 		})
 	).text();
 }
+
+export async function cp(src: string, dest: string) {
+	return await (
+		await fetch(`/copyfile`, {
+			method: 'POST',
+			body: JSON.stringify({ src, dest}),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+	).text();
+}
