@@ -1,0 +1,19 @@
+{
+  "name": "basicfsexpress-frontend",
+  "version": "1.0.0",
+  "description": "Frontend SDK for BasicFsExpress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viridian035/BasicFsExpress-Frontend.git"
+  },
+  "author": "viridian035",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viridian035/BasicFsExpress-Frontend/issues"
+  },
+  "homepage": "https://github.com/viridian035/BasicFsExpress-Frontend#readme"
+}
