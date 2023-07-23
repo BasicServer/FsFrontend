@@ -1,7 +1,9 @@
 # BasicFsExpress-Frontend
 Frontend SDK for BasicFsExpress
 
-This is only designed to work with [this backend](https://github.com/viridian035/BasicFsExpress).
+This is only designed to work with [this backend](https://github.com/viridian035/BasicFsExpress) using the example settings:
+- File prefix: `/file`
+- Directory prefix: `/dir``
 
 ## Usage
 ```TypeScript
