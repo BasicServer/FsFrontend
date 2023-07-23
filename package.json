@@ -1,5 +1,5 @@
 {
-  "name": "basicfsexpress-frontend",
+  "name": "basic-fs-express-frontend",
   "version": "1.0.0",
   "description": "Frontend SDK for BasicFsExpress",
   "main": "index.js",

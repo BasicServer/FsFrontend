@@ -1,33 +1,43 @@
-export function readdir(path: string) {
-	fetch(`/dir/${path}`, {
-		method: 'GET',
-	});
+export async function readdir(path: string) {
+	return await (
+		await fetch(`/dir/${path}`, {
+			method: 'GET',
+		})
+	).text();
 }
 
-export function readFile(path: string) {
-	fetch(`/file/${path}`, {
-		method: 'GET',
-	});
+export async function readFile(path: string) {
+	return await (
+		await fetch(`/file/${path}`, {
+			method: 'GET',
+		})
+	).text();
 }
 
-export function mkdir(path: string) {
-	fetch(`/dir/${path}`, {
-		method: 'PUT',
-	});
+export async function mkdir(path: string) {
+	return await (
+		await fetch(`/dir/${path}`, {
+			method: 'PUT',
+		})
+	).text();
 }
 
-export function writeFile(path: string, content: string) {
-	fetch(`/file/${path}`, {
-		method: 'PUT',
-		body: JSON.stringify({ content }),
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	});
+export async function writeFile(path: string, content: string) {
+	return await (
+		await fetch(`/file/${path}`, {
+			method: 'PUT',
+			body: JSON.stringify({ content }),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+	).text();
 }
 
-export function rm(path: string) {
-	fetch(`/file/${path}`, {
-		method: 'DELETE',
-	});
+export async function rm(path: string) {
+	return await (
+		await fetch(`/file/${path}`, {
+			method: 'DELETE',
+		})
+	).text();
 }
