@@ -1,6 +1,6 @@
 {
-  "name": "basic-fs-express-frontend",
-  "version": "1.1.5",
+  "name": "@basicserver/fs-frontend",
+  "version": "1.0.0",
   "description": "Frontend SDK for BasicFsExpress",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viridian035/BasicFsExpress-Frontend.git"
+    "url": "git+https://github.com/BasicServer/FsFrontend.git"
   },
   "author": "viridian035",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/viridian035/BasicFsExpress-Frontend/issues"
+    "url": "https://github.com/BasicServer/FsFrontend/issues"
   },
-  "homepage": "https://github.com/viridian035/BasicFsExpress-Frontend#readme"
+  "homepage": "https://github.com/BasicServer/FsFrontend#readme"
 }
