@@ -1,11 +1,10 @@
-# BasicFsExpress-Frontend
-Frontend SDK for BasicFsExpress
+# Fs-Frontend
 
 This is only designed to work with [this backend](https://github.com/viridian035/BasicFsExpress).
 
 ## Usage
 ```TypeScript
-import * as Fs from 'basic-fs-express-frontend';
+import * as Fs from '@basicserver/fs-frontend';
 
 const contents = await Fs.readdir('/path/to/directory');
 const text = await Fs.readFile('/path/to/file');
